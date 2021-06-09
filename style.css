@@ -1,0 +1,149 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    background-color: hsl(0, 0%, 81%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.main {
+    display: grid;
+    grid-template-columns: 240px 240px 240px 240px;
+    grid-template-rows: 250px 250px;
+    flex-basis: 1000px;
+    margin: 100px;
+}
+.parts {
+    border-radius: 10px;
+    padding: 20px;
+    color: hsl(0, 0%, 100%);
+}
+
+                /*picture with the name inside all parts*/
+.pic-with-name {
+    display: flex;
+}
+dd {
+    color: hsl(0, 0%, 100%);
+    opacity: 75%;
+    font-size: 12px;
+}
+img {
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    width: 35px;
+    margin-right: 10px;
+}
+h3 {
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 20px;
+    font-weight: normal;
+}
+p {
+    font-size: 12px;
+    color: hsl(0, 0%, 81%);
+}
+
+
+                    /*Part 1*/
+.part1 {
+    background-color: hsl(263, 55%, 52%);
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-bottom: 20px;
+    margin-right: 20px;
+}
+h1 {
+    font-size: 14rem;
+    position: absolute;
+    top: -30px;
+    right: 50px;
+    opacity: 25%;
+}
+
+
+                 /*Part 2*/
+.part2 {
+    background-color: hsl(217, 19%, 35%);
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-right: 20px;
+}
+
+
+                /*Part 3*/
+.part3 {
+    background-color: hsl(0, 0%, 100%);
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.part3 h3, .part3 dt, .part4 h3, .part4 dt{
+    color: #000;
+}
+.part3 dd, .part3 p, .part4 dd, .part4 p{
+    color: #000;
+    opacity: 50%;
+
+}
+
+
+                /*Part 3*/
+.part4 {
+    background-color: hsl(0, 0%, 100%);
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    margin-top: 20px;
+}
+.part5 {
+    background-color: hsl(219, 29%, 14%);
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+                /*Phone screen size*/
+@media (max-width: 940px) {
+    .main {
+        display: flex;
+        flex-basis: 330px;
+        flex-wrap: wrap;
+        margin: 30px;
+    }
+    .parts {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .part1 {
+        order: 1;
+    }
+    .part2 {
+        order: 2;
+    }
+    .part3 {
+        order: 5;
+    }
+    .part4 {
+        order: 3;
+    }
+    .part5 {
+        order: 4;
+    }
+
+}
+.attribution {
+    position: fixed;
+    bottom: 10px;
+}
